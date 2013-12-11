@@ -1,5 +1,5 @@
-eclipse.platform.swt.binaries.haiku
-===================================
+Whuh?
+=====
 
 This repository emulates the structure of the Eclipse/SWT
 eclipse.platform.swt.binaries, limiting it to the files needed for building the
@@ -14,20 +14,21 @@ Dependencies
 
 The following dependencies need to be installed to build SWT/Haiku:
 
-* Haiku x86 gcc4[h] (other flavors haven't been tested, but might work)
-* OpenJDK: If a package isn't available, it can be built from the recipe in the 
-  HaikuPorts tree.
-* Apache Ant: The available HaikuPorts package may not work. Best download a
+* **Haiku x86 gcc4\[h]** (other flavors haven't been tested, but might work)
+* **OpenJDK**: If a package isn't available, it can be built from the recipe in
+  the HaikuPorts tree.
+* **Apache Ant**: The available HaikuPorts package may not work. Best download a
   binary release (tested with 1.9.2) from the
-  [Apache Ant home page](http://ant.apache.org/bindownload.cgi)
-* Apache Commons Bean Scripting Framework (BSF): Download a binary release
+  [Apache Ant home page](http://ant.apache.org/bindownload.cgi).
+* **Apache Commons Bean Scripting Framework (BSF)**: Download a binary release
   (tested with 2.4.0) from the
-  [BSF home page](http://commons.apache.org/proper/commons-bsf/download_bsf.cgi)
-* Apache Commons Logging: Download a binary release (tested with 1.1.3) from the
-  [Apache Commons Logging home page
-  ](http://commons.apache.org/proper/commons-logging/download_logging.cgi)
-* Rhino: Download a binary release (tested with 1_7R4) from the
-  [Rhino home page](https://developer.mozilla.org/en/RhinoDownload)
+  [BSF home page
+  ](http://commons.apache.org/proper/commons-bsf/download_bsf.cgi).
+* **Apache Commons Logging**: Download a binary release (tested with 1.1.3) from
+  the [Apache Commons Logging home page
+  ](http://commons.apache.org/proper/commons-logging/download_logging.cgi).
+* **Rhino**: Download a binary release (tested with 1_7R4) from the
+  [Rhino home page](https://developer.mozilla.org/en/RhinoDownload).
 
 
 Setting things up
@@ -55,7 +56,7 @@ The procedure to set it up is straight-forward:
 Building
 --------
 
-Set ANT_HOME:
+From within the prepared directory set ANT_HOME:
 
      export ANT_HOME=`pwd`/dependencies/apache-ant-1.9.2
 
@@ -66,3 +67,6 @@ Build native libraries:
 Build .jar files:
 
      $ANT_HOME/bin/ant -f eclipse.platform.swt.binaries/bundles/org.eclipse.swt.haiku.haiku.x86/build.xml build.jars -lib dependencies/lib
+
+The built libraries and .jar files will end up in the directory
+"eclipse.platform.swt.binaries/bundles/org.eclipse.swt.haiku.haiku.x86".
